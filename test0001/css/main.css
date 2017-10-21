@@ -123,7 +123,6 @@ a:visited {
     line-height: 170%;
     text-align: justify;
 }
-
 .info-container {
     height: 600px;
     width: 960px;
@@ -160,6 +159,7 @@ footer {
     background: #000;
 }
 #nav2 {
+    position: relative;
     text-align: center;
     border-bottom: 2px solid #222;
 }
@@ -180,8 +180,9 @@ nav a:visited {
 #footer {
     color: #fff;
     width: 100%;
-    height: 360px;
+    height: 500px;
     background: #000;
+    position: relative;
 }
 .footer-container {
     width: 980px;
@@ -206,3 +207,269 @@ nav a:visited {
 .footer-container div a li {
     margin: 5px;
 }
+/*版权信息*/
+.right {
+    width: 100px;
+    margin-left: -50px;
+    color: #fff;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    text-align: center;
+}
+.right p {
+    margin-bottom: 10px;
+}
+/*footer end*/
+
+/*blog start*/
+/*blog-right start*/
+.blog-layout {
+    background: #eee;
+    width: 100%;
+}
+.blog-main {
+    width: 980px;
+    height: 1250px;
+    margin: auto;
+    position: relative;
+}
+.blog-right {
+    width: 710px;
+    float: left;
+}
+.articles {
+    width: 710px;
+    height: 370px;
+    margin: 0 10px 10px 0;
+    background-color: #fff;
+    position: relative;
+}
+.articles:first-child {
+    border-top: 20px solid #eee;
+}
+.left-date {
+    color: #fff;
+    width: 50px;
+    height: 80px;
+    position: absolute;
+    top: 20px;
+    left: -51px;
+}
+.left-date p {
+    display: block;
+    height: 40px;
+    text-align: center;
+    line-height: 40px;
+}
+.left-date p:first-child {
+    background: #522A5C;
+}
+.left-date p:last-child {
+    background: #A660B7;
+}
+.articles h2 {
+    color: #A660B7;
+    padding: 25px 20px 10px 17px;
+    font-size: 16px;
+}
+.articles h3 {
+    color: #666;
+    font-size: 12px;
+    padding: 0 20px 10px 17px;
+}
+.blog-p {
+    font-size: 14px;
+    text-indent: 2em;
+    line-height: 1.7;
+    padding: 0 20px 10px 17px;
+}
+.articles-nav ul {
+    width: 710px;
+    height: 90px;
+    text-align: center;
+}
+.articles-nav ul li {
+    display: inline-block;
+    margin: 0 5px 50px 0;
+    /*padding: 15px;*/
+    background-color: #fff;
+}
+.articles-nav ul li a{
+    color: #000;
+    padding: 15px;
+    margin: 0;
+    display: inline-block;
+}
+.articles-nav ul li a:hover,
+.articles-nav ul li a:active {
+    color: #fff;
+    background-color: #A660B7;
+}
+/*blog-right end*/
+
+/*blog-left start*/
+
+/*blog-search start*/
+.blog-left {
+    margin-top: 20px;
+    float: right;
+    width: 260px;
+}
+.blog-search {
+    width: 260px;
+    height: 80px;
+    background-color: #fff;
+    position: relative;
+}
+.blog-search-wrap {
+    position: absolute;
+    width: 200px;
+    height: 43px;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    border: 1px solid #ddd;
+}
+.blog-search-wrap input {
+    height: 100%;
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+.blog-search-wrap button {
+    color: #fff;
+    float: right;
+    width: 20%;
+    height: 100%;
+    border: 0;
+    margin: 0;
+    padding: 0;
+    cursor: pointer;
+}
+/*blog-search end*/
+
+/*blog-class start*/
+.blog-class {
+    margin: 10px 0 10px 0;
+    background: #fff;
+}
+.blog-class ul {
+    height: 200px;
+}
+.blog-class ul li {
+    height: 48px;
+    border-top: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+    border-left: 3px solid #DFC6E6;
+}
+.blog-class ul li a {
+    line-height: 48px;
+    height: 100%;
+    display: block;
+    color: #000;
+}
+.blog-class ul li:hover,
+.blog-class ul li:focus {
+    border-left: 3px solid #522A5C;
+}
+/*blog-class end*/
+
+/*blog-calendar start*/
+.blog-calendar {
+    width: 260px;
+    height: 240px;
+    background: #fff;
+}
+.blog-calendar table.cal {
+    border-collapse: separate;
+    border-spacing: 0;
+    text-align: center;
+    color: #999;
+    padding: 0 10px 10px 10px;
+    width: 260px;
+}
+.cal tr {
+    width: 260px;
+}
+.cal th, .cal td {
+    border-bottom: 1px solid #eee;
+}
+.cal td {
+    height: 20px;
+}
+.cal caption {
+    color: #773C88;
+    font-weight: bold;
+    font-size: 20px;
+    margin: 20px;
+}
+.cal caption a {
+    color: #773C88;
+    font-size: 20px;
+    font-weight: bold;
+}
+.cal caption [rel="prev"]{
+    float: left;
+    margin-left: 10px;
+}
+.cal caption [rel="next"]{
+    float: right;
+    margin-right: 10px;
+}
+.cal a {
+    color: #999;
+    margin: 0;
+    text-align: center;
+}
+.cal caption a:link,
+.cal caption a:visited {
+    text-decoration: none;
+}
+tbody tr td a {
+    width: 100%;
+    height: 100%;
+    display: inline-block;
+}
+tbody tr td a:hover {
+    background: #773C88;
+    color: #fff;
+}
+.now a {
+    background: #773C88;
+    color: #fff;
+}
+/*blog-calendar end*/
+
+/*blog-tags start*/
+.blog-tags {
+    margin-top: 10px;
+    width: 260px;
+    height: 200px;
+    background: #fff;
+}
+.font {
+    padding: 15px;
+    color: #773C88;
+}
+.font p {
+    color: #666;
+    font-size: 20px;
+    font-family: fantasy;
+}
+.big {
+    font-size: 25px;
+    font-family: sans-serif;
+}
+.small {
+    font-size: 10px;
+    font-family: monospace;
+}
+.big2 {
+    font-size: 15px;
+}
+/*blog-tags end*/
+
+/*blog end*/
