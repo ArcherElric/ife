@@ -473,3 +473,174 @@ tbody tr td a:hover {
 /*blog-tags end*/
 
 /*blog end*/
+
+/*gallery start */
+.gallery-layout {
+    width: 100%;
+    height: 1000px;
+    background-color: #eee;
+}
+.gallery-main {
+    width: 980px;
+    height: 100%;
+    margin: auto;
+    padding-top: 80px;
+}
+
+/*right start */
+.gallery-right {
+    float: left;
+    width: 710px;
+    height: 680px;
+    display: flex;
+    flex-flow: column;
+    position: relative;
+}
+/*tab*/
+.main-tab ul {
+    display: flex;
+    flex-flow: row nowrap;
+    list-style: none;
+    background: #eee;
+    position: absolute;
+    top: -60px;
+}
+.main-tab ul li {
+    flex: 0 1 auto;
+    margin: 20px 0 20px 0;
+    padding: 0;
+}
+.main-tab ul li a {
+    color: #000;
+    margin: 20px 0 0 0;
+    padding: 15px 20px 20px 20px;
+    border: 1px solid #eee;
+    background: #fff;
+}
+
+.main-tab ul li:nth-child(1) a {
+    border-top: 3px solid #43B1C2;
+}
+.main-tab ul li:nth-child(2) a {
+    border-top: 3px solid #DFC6E6;
+}
+.main-tab ul li:nth-child(3) a {
+    border-top: 3px solid #FFE188;
+}
+.main-tab ul li:nth-child(4) a {
+    border-top: 3px solid #D2A6FF;
+}
+.main-tab ul li:nth-child(5) a {
+    border-top: 3px solid #FFA98C;
+}
+.main-tab ul li a:hover {
+    border-top: 3px solid #000;
+    border-bottom: 3px solid #fff;
+}
+/*tab end*/
+
+/*瀑布流 start*/
+.main-right {
+    width: 670px;
+    background: #fff;
+    padding: 20px 20px 0 20px;
+}
+.main-right .masonry {
+    column-count: 4;
+    column-gap: 10px;
+}
+.masonry .cloumn {
+    break-inside: avoid;
+    box-sizing: border-box;
+    padding: 5px 10px;
+}
+.cloumn-wrap {
+    background: #5900B2;
+    width: 160px;
+    color: #fff;
+}
+.cloumn-wrap h4 {
+    margin: 5px;
+    font-size: 14px;
+}
+.cloumn-wrap p {
+    font-size: 10px;
+    line-height: 2em;
+    margin: 5px;
+    text-indent: 2em;
+}
+.cloumn-wrap img {
+    width: 160px;
+}
+
+/*瀑布流 end*/
+
+/*more start*/
+.main-right-more {
+    margin-top: 10px;
+    display: flex;
+}
+.main-right-more a {
+    color: #000;
+    height: 50px;
+    margin: 0;
+    line-height: 50px;
+    width: 100%;
+    background: #fff;
+    text-align: center;
+}
+/*more end*/
+/*right end*/
+
+/*left start*/
+.gallery-left {
+    float: right;
+    width: 260px;
+}
+.gallery-search {
+    height: 80px;
+    width: auto;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.gallery-search * {
+
+    border: 1px solid #000;
+}
+.gallery-search input {
+    height: 40px;
+}
+.gallery-search button {
+    font: 15px bold;
+    height: 41px;
+    border-left:  none;
+    padding: 0 10px 0 10px;
+}
+.hot-rank {
+    margin-top: 10px;
+    height: 240px;
+    width: 260px;
+    background: #fff;
+}
+.hot-rank p {
+    color: #FFA98C;
+    padding: 10px 10px 10px 20px;
+}
+.hot-rank ol {
+    height: 70%;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    border: 4px double #DDDDDD;
+    margin: 10px;
+}
+.hot-rank ol li {
+    list-style: decimal;
+    margin: 0 20px 0 40px;
+}
+.hot-rank ol li:last-child {
+    color: red;
+}
+/*left end*/
