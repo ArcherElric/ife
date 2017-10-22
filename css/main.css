@@ -644,3 +644,91 @@ tbody tr td a:hover {
     color: red;
 }
 /*left end*/
+
+/*about start*/
+.about-layout {
+    height: 1000px;
+    width: auto;
+    background: #eee;
+    display: flex;
+    justify-content: center;
+}
+.about-main {
+    width: 980px;
+    height: auto;
+    background: #fff;
+    margin-top: 100px;
+    margin-bottom: 100px;
+    display: flex;
+    flex-flow: row;
+}
+.about-right {
+    width: 50%;
+    border-right: 2px solid #eee;
+    position: relative;
+}
+.about-left {
+    width: 50%;
+    position: relative;
+    border-left: 2px solid #eee;
+}
+.about-right img[alt="info"] {
+    position: absolute;
+    top: 5px;
+    right: -75px;
+    width: 150px;
+    z-index: 100;
+}
+.about-right img[alt="phone"] {
+    position: absolute;
+    top: 210px;
+    z-index: 100;
+    right: -75px;
+}
+.about-right img[alt="school"] {
+    position: absolute;
+    top: 400px;
+    z-index: 100;
+    right: -75px;
+}
+.about-right img[alt="company"] {
+    position: absolute;
+    top: 600px;
+    z-index: 100;
+    right: -75px;
+}
+.about-right h1 {
+    position: absolute;
+    top: 80px;
+    right: 100px;
+}
+.about-right .contact {
+    position: absolute;
+    top: 250px;
+    right: 100px;
+}
+.about-right .education {
+    position: absolute;
+    top: 430px;
+    right: 100px;
+}
+.about-right .company {
+    position: absolute;
+    top: 640px;
+    right: 100px;
+}
+.about-left .info {
+    padding: 30px;
+    position: absolute;
+    top: 130px;
+}
+.about-left .phone {
+    padding: 30px;
+    position: absolute;
+    top: 300px;
+}
+.about-left .school {
+    position: absolute;
+    padding: 30px;
+    top: 500px;
+}
