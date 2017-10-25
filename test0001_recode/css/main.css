@@ -255,6 +255,9 @@ a {
 .blog-articles-tab p:last-child {
     background: #a660b7;
 }
+.blog-articles {
+    padding: 10px;
+}
 .blog-articles h1, h2 {
     padding: 10px;
 }
@@ -272,6 +275,28 @@ a {
     margin: 0 10px 10px 10px;
     font-size: 16px;
     text-indent: 2em;
+    line-height: 1.7em;
+}
+.articles-links ul {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+}
+.articles-links ul li {
+    margin: 5px;
+    background: #fff;
+    display: flex;
+    align-content: stretch;
+}
+.articles-links ul li a {
+    padding: 15px;
+    color: #000;
+    display: block;
+}
+.articles-links ul li a:hover,
+.articles-links ul li a:active {
+    color: #fff;
+    background-color: #a660b7;
 }
 .blog-search {
     display: flex;
@@ -371,7 +396,134 @@ tr td a:hover {
     text-align: center;
 }
 .blog-tags {
+    padding: 20px;
     margin-bottom: 10px;
-    height: 200px;
+    color: #773c88;
     background: #fff;
 }
+.blog-tags p {
+    padding-bottom: 10px;
+}
+
+.tags-big {
+    font-size: 30px;
+    font-weight: 700;
+}
+.tags-middle {
+    font-size: 20px;
+    font-weight: 400;
+}
+.tags-small {
+    font-size: 10px;
+}
+/* blog end */
+
+/* gallery start */
+
+/* gallery end */
+
+/* about start */
+#about-layout {
+    overflow: hidden;
+    background-color: #eee;
+}
+.about-main {
+    display: flex;
+    flex-flow: row nowrap;
+    margin: auto;
+    margin-bottom: 10%;
+    margin-top: 5%;
+    width: 70%;
+    height: 1200px;
+}
+.about-main-right {
+    position: relative;
+    margin: 2px;
+    width: 49%;
+    background-color: #fff;
+}
+.about-main-left {
+    margin: 2px;
+    width: 49%;
+    background-color: #fff;
+}
+.about-main-right img {
+    width: 30%;
+    z-index: 9999;
+}
+.about-main-right [alt=my-info] {
+    position: absolute;
+    top: 1%;
+    right: -15%;
+}
+.about-main-right [alt=phone] {
+    position: absolute;
+    top: 30%;
+    right: -15%;
+}
+.about-main-right [alt=school] {
+    position: absolute;
+    top: 50%;
+    right: -15%;
+}
+.about-main-right [alt=company] {
+    position: absolute;
+    top: 70%;
+    right: -15%;
+}
+.about-main-right {
+    color: #522a5c;
+}
+.about-main-right h2 {
+    position: absolute;
+    top: 15%;
+    right: 15%;
+    font-size: 25px;
+}
+.about-main-right .my-phone {
+    position: absolute;
+    top: 40%;
+    right: 15%;
+    font-size: 17px;
+}
+.about-main-right .school {
+    position: absolute;
+    top: 60%;
+    right: 15%;
+    font-size: 17px;
+}
+.about-main-right .company {
+    position: absolute;
+    top: 80%;
+    right: 15%;
+    font-size: 17px;
+}
+.about-main-left {
+    position: relative;
+    padding: 10px;
+    font-size: 15px;
+    color: #522a5c;
+}
+.about-main-left .my-description {
+    position: absolute;
+    top: 15%;
+    padding: 10px;
+    text-indent: 2em;
+    line-height: 1.7em;
+}
+.about-main-left .my-contact {
+    position: absolute;
+    top: 40%;
+    left: 15%;
+}
+.about-main-left .my-school {
+    position: absolute;
+    top: 60%;
+    left: 15%;
+}
+.about-main-left .my-company {
+    position: absolute;
+    top: 80%;
+    left: 15%;
+}
+/* about end */

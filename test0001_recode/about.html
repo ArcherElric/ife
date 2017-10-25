@@ -18,45 +18,34 @@
             </div>
             <a href="https://www.github.com/ArcherElric/"><img src="img/icon-github.png" alt="" id="github-link"></a>
         </div>
-        <article id="body-layout">
-            <div class="background">
-                <div class="background-message">
-                    <h1>这里的难点</h1>
-                    <p>是如何实现背景色的渐变,我使用的是background-image里的linear-gradient属性</p>                 </p>
+        <article id="about-layout">
+            <div class="about-main">
+                <div class="about-main-right">
+                    <img src="img/my-info.jpg" alt="my-info">
+                    <img src="img/phone.png" alt="phone">
+                    <img src="img/school.png" alt="school">
+                    <img src="img/company.png" alt="company">
+                    <h2>Archer Elric</h2>
+                    <h3 class="my-phone">联系方式</h3>
+                    <h3 class="school">教育经历</h3>
+                    <h3 class="company">实习经历</h3>
                 </div>
-            </div>
-            <div class="my-articles">
-                <div class="articles-wrap">
-                    <div class="articles">
-                        <img src="img/street.jpg" alt="">
-                        <p>这里是三列布局，而且这三列的下端保持一致，而且对文字的长度自适应。一开始并没有考虑到如果下端过长到溢出到自我介绍的部分。
-                            在调试效果的时候发现了这个问题，所以就把wrap的margin-bottom设置为20%，自适应长度。
-                        </p>
-                    </div>
-                    <div class="articles">
-                        <img src="img/car.jpg" alt="">
-                        <p>我一开始的做法是对容器的margin-bottom设置为-9999px，然后对容器的padding设置为9999px，就可以实现。</p>
-                        <p>但是现在这里我使用了flex的布局，每个容器的width是自适应的，而且下端也是自适应的。</p>
-                    </div>
-                    <div class="articles">
-                        <img src="img/college.jpg" alt="">
-                        <p>一开始我也不知道怎么就实现了自适应，过后我仔细看了看。发现，articles容器本身是对文字自适应的，这一点没有疑惑。
-                        然后我发现，我是把这三列放在了一个articles-wrap容器里了，所以只要有一列的长度变长，那么wrap的高度就变大，
-                        以装下子元素article，而另外的两列我没有设置高度，所以应该是默认的100%，也就是说它们会自动向下填满空白，这样
-                        就完成了对其他列文字的自适应。
-                        </p>
-                    </div>
+                <div class="about-main-left">
+                    <p class="my-description">
+                        这里我还是使用了解绝对定位，一开始我觉得这样的方式是不好的，但是我发现如果想要一个
+                        好的结构的话，就需要给每一段介绍都加上一个div容器，这就给结构上加了很多div标签。
+                    </p>
+                    <p class="my-contact">
+                        手机号码：13388033179 <br>
+                        邮箱地址: elricxie@163.com
+                    </p>
+                    <p class="my-school">
+                        2017.9～2018.7：天津大学 化工学院
+                    </p>
+                    <p class="my-company">
+                        就这样了吧，接下来要做的就是给项目增加JS的功能了
+                    </p>
                 </div>
-            </div>
-            <div id="my-info-layout">
-                <img src="img/my-info.jpg" alt="my-info">
-                <h1>这是自我介绍</h1>
-                <p>
-                    这里我没有使用一个div把标题和p都包起来。因为之前是用的，所以现在试一试不用的话，
-                    可不可以实现。底下的link的hover不知道为什么出了一个bug，有时候不把鼠标放在目标a上，
-                    放在其他的a上时，也会触发别的a的hover效果，这就很奇怪了。而且就算改成之前我写的代码
-                    ，还是会出现。但是之前的就没有出现，不知道这是个什么原因导致的。
-                </p>
             </div>
         </article>
         <footer id="footer-layout">
@@ -75,13 +64,11 @@
                         <a href="javascript:;"><li>Link</li></a>
                         <a href="javascript:;"><li>Link</li></a>
                         <a href="javascript:;"><li>Link</li></a>
-                        <a href="javascript:;"><li>Link</li></a>
                     </ul>
                 </div>
                 <div class="footer-link">
                     <p>友情链接</p>
                     <ul>
-                        <a href="javascript:;"><li>Link</li></a>
                         <a href="javascript:;"><li>Link</li></a>
                         <a href="javascript:;"><li>Link</li></a>
                         <a href="javascript:;"><li>Link</li></a>
