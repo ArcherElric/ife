@@ -1,81 +1,237 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="utf-8">
-        <title>Archer Elric's Web</title>
-        <link rel="stylesheet" href="css/main.css">
-    </head>
-    <body>
-        <div id="head-nav-layout">
-            <div class="nav">
-                <p>Archer Elric</p>
-                <ul>
-                    <li><a href="index.html">首页</a></li>
-                    <li><a href="blog.html">文章</a></li>
-                    <li><a href="gallery.html">作品</a></li>
-                    <li><a href="about.html">关于</a></li>
-                </ul>
-            </div>
-            <a href="https://www.github.com/ArcherElric/"><img src="img/icon-github.png" alt="" id="github-link"></a>
+
+<head>
+    <meta charset="utf-8">
+    <title>Archer Elric's Web</title>
+    <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body>
+    <div id="head-nav-layout">
+        <div class="nav">
+            <p>Archer Elric</p>
+            <ul>
+                <li>
+                    <a href="index.html">首页</a>
+                </li>
+                <li>
+                    <a href="blog.html">文章</a>
+                </li>
+                <li>
+                    <a href="gallery.html">作品</a>
+                </li>
+                <li>
+                    <a href="about.html">关于</a>
+                </li>
+            </ul>
         </div>
-        <article id="gallery-layout">
-            
-        </article>
-        <footer id="footer-layout">
-            <div id="footer-nav">
+        <a href="https://www.github.com/ArcherElric/">
+            <img src="img/icon-github.png" alt="" id="github-link">
+        </a>
+    </div>
+    <article id="gallery-layout">
+        <div id="gallery-body">
+            <div class="gallery-main">
+                <div class="gallery-main-tab">
+                    <ul>
+                        <li>
+                            <a href="">ALL</a>
+                        </li>
+                        <li>
+                            <a href="">JavaScript</a>
+                        </li>
+                        <li>
+                            <a href="">HTML</a>
+                        </li>
+                        <li>
+                            <a href="">CSS</a>
+                        </li>
+                        <li>
+                            <a href="">jQuery</a>
+                        </li>
+                    </ul>
+                </div>
+                    <div class="main-right">
+                        <!-- 瀑布流 -->
+                        <div class="masonry">
+                            <div class="cloumn">
+                                <div class="cloumn-wrap">
+                                    <img src="img/wing.png" alt="wing">
+                                    <h4>这其实是一张两个图片大小的图</h4>
+                                    <p>这是等宽大小的瀑布流,并不是ife要求的那种不等宽的瀑布流,找了一天的信息,还是没有找到不等宽的瀑布流的纯CSS实现方法</p>
+                                </div>
+                            </div>
+                            <div class="cloumn">
+                                <div class="cloumn-wrap">
+                                    <img src="img/night.png" alt="wing">
+                                    <h4>星球</h4>
+                                    <p>星空的东西,不是很向往,虽然觉得有时候很神秘很美</p>
+                                </div>
+                            </div>
+                            <div class="cloumn">
+                                <div class="cloumn-wrap">
+                                    <img src="img/star.png" alt="wing">
+                                    <h4>标题</h4>
+                                    <p>这是内容?有点不对劲,因为它没有按我排列的顺序进行排列</p>
+                                </div>
+                            </div>
+                            <div class="cloumn">
+                                <div class="cloumn-wrap">
+                                    <img src="img/car.jpg" alt="wing">
+                                    <h4>这是之前的那张图</h4>
+                                    <p>因为图片的height都是差不多的,所以只能用文字来实现高度的差距</p>
+                                </div>
+                            </div>
+                            <div class="cloumn">
+                                <div class="cloumn-wrap">
+                                    <img src="img/flirt.png" alt="wing">
+                                    <h4>标题</h4>
+                                    <p>这是内容!</p>
+                                </div>
+                            </div>
+                            <div class="cloumn">
+                                <div class="cloumn-wrap">
+                                    <img src="img/car.jpg" alt="wing">
+                                    <h4>这是之前的那张图</h4>
+                                    <p>因为图片的height都是差不多的,所以只能用文字来实现高度的差距</p>
+                                </div>
+                            </div>
+                            <div class="cloumn">
+                                <div class="cloumn-wrap">
+                                    <img src="img/flirt.png" alt="wing">
+                                    <h4>标题</h4>
+                                    <p>这是内容!这是内容!这是内容!这是内容!这是内容!这是内容!这是内容!</p>
+                                </div>
+                            </div>
+                            <div class="cloumn">
+                                <div class="cloumn-wrap">
+                                    <img src="img/street.jpg" alt="wing">
+                                    <h4>标题</h4>
+                                    <p>这是内容!这是内容!这是内容!这是内容!</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                <div class="gallery-more">
+                    <a href="">点击获取更多内容</a>
+                </div>
+            </div>
+            <div class="gallery-search">
+                <div class="gallery-search-main">
+                    <div class="gallery-search-wrap">
+                        <input type="text" name="" id="" placeholder="Search...">
+                        <button>GO</button>
+                    </div>
+                </div>
+                <div class="hot-rank">
+                    <h4>人气排行榜</h4>
+                    <ol>
+                        <li>HTML</li>
+                        <li>CSS</li>
+                        <li>JavaScript</li>
+                        <li>jQuert</li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+    </article>
+    <footer id="footer-layout">
+        <div id="footer-nav">
+            <ul>
+                <li>
+                    <a href="index.html">首页</a>
+                </li>
+                <li>
+                    <a href="blog.html">文章</a>
+                </li>
+                <li>
+                    <a href="gallery.html">作品</a>
+                </li>
+                <li>
+                    <a href="about.html">关于</a>
+                </li>
+            </ul>
+        </div>
+        <div id="footer-link-wrap">
+            <div class="footer-link">
+                <p>学习资料</p>
                 <ul>
-                    <li><a href="index.html">首页</a></li>
-                    <li><a href="blog.html">文章</a></li>
-                    <li><a href="gallery.html">作品</a></li>
-                    <li><a href="about.html">关于</a></li>
+                    <a href="javascript:;">
+                        <li>Link</li>
+                    </a>
+                    <a href="javascript:;">
+                        <li>Link</li>
+                    </a>
+                    <a href="javascript:;">
+                        <li>Link</li>
+                    </a>
                 </ul>
             </div>
-            <div id="footer-link-wrap">
-                <div class="footer-link">
-                    <p>学习资料</p>
-                    <ul>
-                        <a href="javascript:;"><li>Link</li></a>
-                        <a href="javascript:;"><li>Link</li></a>
-                        <a href="javascript:;"><li>Link</li></a>
-                    </ul>
-                </div>
-                <div class="footer-link">
-                    <p>友情链接</p>
-                    <ul>
-                        <a href="javascript:;"><li>Link</li></a>
-                        <a href="javascript:;"><li>Link</li></a>
-                        <a href="javascript:;"><li>Link</li></a>
-                    </ul>
-                </div>
-                <div class="footer-link">
-                    <p>我的爱好</p>
-                    <ul>
-                        <a href="javascript:;"><li>Link</li></a>
-                        <a href="javascript:;"><li>Link</li></a>
-                        <a href="javascript:;"><li>Link</li></a>
-                    </ul>
-                </div>
-                <div class="footer-link">
-                    <p>校园生活</p>
-                    <ul>
-                        <a href="javascript:;"><li>Link</li></a>
-                        <a href="javascript:;"><li>Link</li></a>
-                        <a href="javascript:;"><li>Link</li></a>
-                    </ul>
-                </div>
-                <div class="footer-link">
-                    <p>无法点击</p>
-                    <ul>
-                        <a href="javascript:;"><li>Link</li></a>
-                        <a href="javascript:;"><li>Link</li></a>
-                        <a href="javascript:;"><li>Link</li></a>
-                    </ul>
-                </div>
+            <div class="footer-link">
+                <p>友情链接</p>
+                <ul>
+                    <a href="javascript:;">
+                        <li>Link</li>
+                    </a>
+                    <a href="javascript:;">
+                        <li>Link</li>
+                    </a>
+                    <a href="javascript:;">
+                        <li>Link</li>
+                    </a>
+                </ul>
             </div>
-            <div id="footer-right">
-                <p>版权信息</p>
-                <a href="https://www.github.com/ArcherElric/"><img src="img/icon-github.png" alt=""></a>
+            <div class="footer-link">
+                <p>我的爱好</p>
+                <ul>
+                    <a href="javascript:;">
+                        <li>Link</li>
+                    </a>
+                    <a href="javascript:;">
+                        <li>Link</li>
+                    </a>
+                    <a href="javascript:;">
+                        <li>Link</li>
+                    </a>
+                </ul>
             </div>
-        </footer>
-    </body>
+            <div class="footer-link">
+                <p>校园生活</p>
+                <ul>
+                    <a href="javascript:;">
+                        <li>Link</li>
+                    </a>
+                    <a href="javascript:;">
+                        <li>Link</li>
+                    </a>
+                    <a href="javascript:;">
+                        <li>Link</li>
+                    </a>
+                </ul>
+            </div>
+            <div class="footer-link">
+                <p>无法点击</p>
+                <ul>
+                    <a href="javascript:;">
+                        <li>Link</li>
+                    </a>
+                    <a href="javascript:;">
+                        <li>Link</li>
+                    </a>
+                    <a href="javascript:;">
+                        <li>Link</li>
+                    </a>
+                </ul>
+            </div>
+        </div>
+        <div id="footer-right">
+            <p>版权信息</p>
+            <a href="https://www.github.com/ArcherElric/">
+                <img src="img/icon-github.png" alt="">
+            </a>
+        </div>
+    </footer>
+</body>
+
 </html>
