@@ -2,102 +2,106 @@
 <html>
     <head>
         <meta charset="utf-8">
-        <title>ArcherElric's Web</title>
+        <title>Archer Elric's Web</title>
         <link rel="stylesheet" href="css/main.css">
     </head>
     <body>
-        <header>
-            <div id="outer">
-                <p id="myid">Archer Elric</p>
-                <nav id="nav1">
-                    <a href="index.html">首页</a>
-                    <a href="blog.html">文章</a>
-                    <a href="gallery.html">作品</a>
-                    <a href="about.html">关于</a>
-                </nav>
+        <div id="head-nav-layout">
+            <div class="nav">
+                <p>Archer Elric</p>
+                <ul>
+                    <li><a href="index.html">首页</a></li>
+                    <li><a href="blog.html">文章</a></li>
+                    <li><a href="gallery.html">作品</a></li>
+                    <li><a href="about.html">关于</a></li>
+                </ul>
             </div>
-            <a href="https://github.com/ArcherElric/"><img src="img/icon-github.png"
-                alt="Github_logo" id="ghloge" title="Go to My Github"></a>
-        </header>
-        <article class="blog-layout">
-            <div class="blog-main">
-                <div class="blog-right">
-                    <div class="articles">
-                        <div class="left-date">
-                            <p>10.21</p>
-                            <p>CSS</p>
+            <a href="https://www.github.com/ArcherElric/"><img src="img/icon-github.png" alt="" id="github-link"></a>
+        </div>
+        <article id="blog-body-layout">
+            <div id="blog-body">
+                <div class="blog-articles-wrap">
+                    <div class="blog-articles">
+                        <div class="blog-articles-tab">
+                            <p>10/23</p>
+                            <p>HTML</p>
                         </div>
-                        <h2>项目名称</h2>
-                        <h3>中化泉州石化3万吨/年干气脱硫制二甲基亚砜项目</h3>
-                        <p class="blog-p">中化泉州石化有限公司（国家控股型）成立于2006年9月26日，注册资金95亿元人民币，是国有大型骨干企业、世界五百强企业中国中化集团公司的全资子公司。承担中化泉州1200万吨/年炼化项目的建设、运营任务。</p>
+                        <h1>blog的部分</h1>
+                        <h2>article</h2>
+                        <p class="articles-p">
+                            这里使用了flex布局，但是我发现使用float也很容易实现。
+                            之前用了float的，那么这里我就使用了flex来实现。
+                            左边和右边的比例是使用flex的 flex:3 和 flex:1 来实现的。
+                         </p>
                     </div>
-                    <div class="articles">
-                        <div class="left-date">
-                            <p>10.21</p>
-                            <p>CSS</p>
+                    <div class="blog-articles">
+                        <div class="blog-articles-tab">
+                            <p>10/23</p>
+                            <p>HTML</p>
                         </div>
-                        <h2>公司简介</h2>
-                        <h3>所属区域：东南沿海地区</h3>
-                        <p class="blog-p">中化泉州石化有限公司隶属于中国中化集团公司，项目由国有大型骨干企业、世界五百强企业中国中化集团公司投资建设，选址于福建省泉州湾石化基地泉惠石化工业园区，占地约4000亩。 中化泉州石化有限公司拟规划建设常减压蒸馏、渣油加氢、蜡油加氢裂化、连续重整、重油催化裂化、延迟焦化、聚丙烯等19套炼油生产装置以及配套的码头仓储设施，年设计加工原油1200万吨，总投资约300亿元人民币，主要生产煤油、汽油、柴油、苯、甲苯、混合二甲苯、聚丙烯以及液化气、硫磺、化工轻油等产品，2013年底全面建成投产。</p>
+                        <h1>Articles的阴影效果</h1>
+                        <h2>阴影</h2>
+                        <p class="articles-p">
+                            本来这里我使用了box-shadow实现阴影的效果，但是我发现虽然这能很好的
+                            表现出3D的效果，但是突出的部分和整个页面的风格不搭。所以就没有使用。
+                            因为这个网站的风格是扁平的，而是使用了阴影就破坏了这样的感觉。
+                         </p>
                     </div>
-                    <div class="articles">
-                        <div class="left-date">
-                            <p>10.21</p>
-                            <p>CSS</p>
+                    <div class="blog-articles">
+                        <div class="blog-articles-tab">
+                            <p>10/23</p>
+                            <p>HTML</p>
                         </div>
-                        <h2>项目建设内容</h2>
-                        <h3>投资项目性质：新建</h3>
-                        <p class="blog-p">本项目依托中化泉州石化有限公司1200万吨/年炼油项目230万吨/年轻烃回收装置，拟定年资源化利用3万吨轻烃回收干气，生产2.7万吨/年二甲基亚砜产品，副产1.7万吨/年净化干气及0.12万吨/年甲硫醇产品。工程项目估算总投资为3.0亿元，预计将于2年内完工并投入生产。</p>
+                        <h1>日历部分</h1>
+                        <h2>应该是最麻烦的一个模块了</h2>
+                        <p class="articles-p">
+                            日历部分因为用到的是表格table，所以还是一个比较繁琐的模块，
+                            日历标题是用caption,然后是thead,tbody；然后是th，tr,td。
+                         </p>
                     </div>
-                    <!-- 导航条 -->
-                    <div class="articles-nav">
+                    <div class="articles-links">
                         <ul>
-                            <li><a href="#javascript:;">第一页</a></li>
-                            <li><a href="#javascript:;">上一页</a></li>
-                            <li><a href="#javascript:;">1</a></li>
-                            <li><a href="#javascript:;">2</a></li>
-                            <li><a href="#javascript:;">3</a></li>
-                            <li><a href="#javascript:;">4</a></li>
-                            <li><a href="#javascript:;">...</a></li>
-                            <li><a href="#javascript:;">下一页</a></li>
-                            <li><a href="#javascript:;">最后页</a></li>
+                            <li><a href="">第一页</a></li>    
+                            <li><a href="">上一页</a></li>
+                            <li><a href="">1</a></li>
+                            <li><a href="">2</a></li>
+                            <li><a href="">3</a></li>
+                            <li><a href="">4</a></li>
+                            <li><a href="">...</a></li>
+                            <li><a href="">下一页</a></li>
+                            <li><a href="">最后页</a></li>
                         </ul>
                     </div>
                 </div>
-                <div class="blog-left">
-                    <!-- 搜索 -->
+                <div class="blog-tab">
                     <div class="blog-search">
                         <div class="blog-search-wrap">
-                            <input type="text" name="" value="" placeholder=" Search">
-                            <button type="button" name="button">GO!</button>
+                            <input type="text" placeholder="Search...">
+                            <button type="POST" name="button">GO</button>
                         </div>
                     </div>
-                    <!-- 选项 -->
-                    <div class="blog-class">
-                        <ul>
-                            <li><a href="#javascript:;">HTML</a></li>
-                            <li><a href="#javascript:;">CSS</a></li>
-                            <li><a href="#javascript:;">JavaScript</a></li>
-                            <li><a href="#javascript:;">其他文章</a></li>
-                        </ul>
+                    <div class="blog-li">
+                        <a href="javascrpt:;">HTML</a>
+                        <a href="javascrpt:;">CSS</a>
+                        <a href="javascrpt:;">JavaScript</a>
+                        <a href="javascrpt:;">jQuery</a>
                     </div>
-                    <!-- 日历 -->
                     <div class="blog-calendar">
                         <table class="cal">
                             <caption>
-                                <a href="#javascript:;" rel="prev">&lt;</a>
-                                    2017.10
-                                <a href="#javascript:;" rel="next">&gt;</a>
+                                <a href="#" rel="pre">&lt;</a>
+                                2017.10
+                                <a href="#" rel="next">&gt;</a>
                             </caption>
                             <thead>
                                 <tr>
-                                    <th scope="col">M</th>
-                                    <th scope="col">T</th>
-                                    <th scope="col">W</th>
-                                    <th scope="col">T</th>
-                                    <th scope="col">F</th>
-                                    <th scope="col">S</th>
-                                    <th scope="col">S</th>
+                                    <th>M</th>
+                                    <th>T</th>
+                                    <th>W</th>
+                                    <th>T</th>
+                                    <th>F</th>
+                                    <th>S</th>
+                                    <th>S</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -134,11 +138,11 @@
                                     <td><a href="#">18</a></td>
                                     <td><a href="#">19</a></td>
                                     <td><a href="#">20</a></td>
-                                    <td class="now"><a href="#">21</a></td>
+                                    <td><a href="#">21</a></td>
                                     <td><a href="#">22</a></td>
                                 </tr>
                                 <tr>
-                                    <td><a href="#">23</a></td>
+                                    <td class="now"><a href="#">23</a></td>
                                     <td><a href="#">24</a></td>
                                     <td><a href="#">25</a></td>
                                     <td><a href="#">26</a></td>
@@ -158,96 +162,79 @@
                             </tbody>
                         </table>
                     </div>
-                    <!-- 杂项 -->
                     <div class="blog-tags">
-                        <div class="font">
-                            <p>tags</p>
-                            <span class="big">JavaScript</span>
-                            <span class="big2">CSS</span>
-                            <span class="small">flex</span>
-                            <span>WebGL</span>
-                            <span class="big">HTML</span>
-                            <span>Canvas</span>
-                            <span>prototype</span>
-                            <span class="big">HTML5</span>
-                            <span class="small">grid</span>
-                            <span>nodeJS</span>
-                            <span>CSS3</span>
-                            <span class="big">jQuery Echarts</span>
-                        </div>
+                        <p>Tags</p>
+                        <span class="tags-big">JavaScript</span>
+                        <span class="tags-middle">CSS</span>
+                        <span class="tags-small">flex</span>
+                        <span class="tags-small">WebGL</span>
+                        <span class="tags-big">HTML</span>
+                        <span>Canvas</span>
+                        <span>prototype</span>
+                        <span>prototype</span>
+                        <span class="tags-middle">HTML5</span>
+                        <span class="tags-small">grid</span>
+                        <span>nodeJS</span>
+                        <span>CSS3</span>
+                        <span class="tags-big">jQuery Echarts</span>
                     </div>
                 </div>
             </div>
         </article>
-        <footer>
-            <nav id="nav2">
-                <a href="index.html">首页</a>
-                <a href="blog.html">文章</a>
-                <a href="gallery.html">作品</a>
-                <a href="about.html">关于</a>
-            </nav>
-            <div id="footer">
-                <div class="footer-container">
-                    <div>
-                        <p>学习资料</p>
-                        <ul>
-                            <a href="#javascript:;"><li>Link</li></a>
-                            <a href="#javascript:;"><li>Link</li></a>
-                            <a href="#javascript:;"><li>Link</li></a>
-                            <a href="#javascript:;"><li>Link</li></a>
-                            <a href="#javascript:;"><li>Link</li></a>
-                            <a href="#javascript:;"><li>Link</li></a>
-                        </ul>
-                    </div>
-                    <div>
-                        <p>友情链接</p>
-                        <ul>
-                            <a href="#javascript:;"><li>Link</li></a>
-                            <a href="#javascript:;"><li>Link</li></a>
-                            <a href="#javascript:;"><li>Link</li></a>
-                            <a href="#javascript:;"><li>Link</li></a>
-                            <a href="#javascript:;"><li>Link</li></a>
-                            <a href="#javascript:;"><li>Link</li></a>
-                        </ul>
-                    </div>
-                    <div>
-                        <p>我的爱好</p>
-                        <ul>
-                            <a href="#javascript:;"><li>Link</li></a>
-                            <a href="#javascript:;"><li>Link</li></a>
-                            <a href="#javascript:;"><li>Link</li></a>
-                            <a href="#javascript:;"><li>Link</li></a>
-                            <a href="#javascript:;"><li>Link</li></a>
-                            <a href="#javascript:;"><li>Link</li></a>
-                        </ul>
-                    </div>
-                    <div>
-                        <p>化工生活</p>
-                        <ul>
-                            <a href="#javascript:;"><li>Link</li></a>
-                            <a href="#javascript:;"><li>Link</li></a>
-                            <a href="#javascript:;"><li>Link</li></a>
-                            <a href="#javascript:;"><li>Link</li></a>
-                            <a href="#javascript:;"><li>Link</li></a>
-                            <a href="#javascript:;"><li>Link</li></a>
-                        </ul>
-                    </div>
-                    <div>
-                        <p>校园活动</p>
-                        <ul>
-                            <a href="#javascript:;"><li>Link</li></a>
-                            <a href="#javascript:;"><li>Link</li></a>
-                            <a href="#javascript:;"><li>Link</li></a>
-                            <a href="#javascript:;"><li>Link</li></a>
-                            <a href="#javascript:;"><li>Link</li></a>
-                            <a href="#javascript:;"><li>Link</li></a>
-                        </ul>
-                    </div>
+        <footer id="footer-layout">
+            <div id="footer-nav">
+                <ul>
+                    <li><a href="index.html">首页</a></li>
+                    <li><a href="blog.html">文章</a></li>
+                    <li><a href="gallery.html">作品</a></li>
+                    <li><a href="about.html">关于</a></li>
+                </ul>
+            </div>
+            <div id="footer-link-wrap">
+                <div class="footer-link">
+                    <p>学习资料</p>
+                    <ul>
+                        <a href="javascript:;"><li>Link</li></a>
+                        <a href="javascript:;"><li>Link</li></a>
+                        <a href="javascript:;"><li>Link</li></a>
+                    </ul>
                 </div>
-                <div class="right">
-                    <p class="right-info">版权信息</p>
-                    <img src="img/icon-github.png" alt="logo">
+                <div class="footer-link">
+                    <p>友情链接</p>
+                    <ul>
+                        <a href="javascript:;"><li>Link</li></a>
+                        <a href="javascript:;"><li>Link</li></a>
+                        <a href="javascript:;"><li>Link</li></a>
+                    </ul>
                 </div>
+                <div class="footer-link">
+                    <p>我的爱好</p>
+                    <ul>
+                        <a href="javascript:;"><li>Link</li></a>
+                        <a href="javascript:;"><li>Link</li></a>
+                        <a href="javascript:;"><li>Link</li></a>
+                    </ul>
+                </div>
+                <div class="footer-link">
+                    <p>校园生活</p>
+                    <ul>
+                        <a href="javascript:;"><li>Link</li></a>
+                        <a href="javascript:;"><li>Link</li></a>
+                        <a href="javascript:;"><li>Link</li></a>
+                    </ul>
+                </div>
+                <div class="footer-link">
+                    <p>无法点击</p>
+                    <ul>
+                        <a href="javascript:;"><li>Link</li></a>
+                        <a href="javascript:;"><li>Link</li></a>
+                        <a href="javascript:;"><li>Link</li></a>
+                    </ul>
+                </div>
+            </div>
+            <div id="footer-right">
+                <p>版权信息</p>
+                <a href="https://www.github.com/ArcherElric/"><img src="img/icon-github.png" alt=""></a>
             </div>
         </footer>
     </body>

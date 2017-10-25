@@ -1,36 +1,57 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="utf-8">
-        <title>ArcherElric's Web</title>
-        <link rel="stylesheet" href="css/main.css">
-    </head>
-    <body>
-        <header>
-            <div id="outer">
-                <p id="myid">Archer Elric</p>
-                <nav id="nav1">
+
+<head>
+    <meta charset="utf-8">
+    <title>Archer Elric's Web</title>
+    <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body>
+    <div id="head-nav-layout">
+        <div class="nav">
+            <p>Archer Elric</p>
+            <ul>
+                <li>
                     <a href="index.html">首页</a>
+                </li>
+                <li>
                     <a href="blog.html">文章</a>
+                </li>
+                <li>
                     <a href="gallery.html">作品</a>
+                </li>
+                <li>
                     <a href="about.html">关于</a>
-                </nav>
-            </div>
-            <a href="https://github.com/ArcherElric/"><img src="img/icon-github.png"
-                alt="Github_logo" id="ghloge" title="Go to My Github"></a>
-        </header>
-        <article class="gallery-layout">
+                </li>
+            </ul>
+        </div>
+        <a href="https://www.github.com/ArcherElric/">
+            <img src="img/icon-github.png" alt="" id="github-link">
+        </a>
+    </div>
+    <article id="gallery-layout">
+        <div id="gallery-body">
             <div class="gallery-main">
-                <div class="gallery-right">
-                    <div class="main-tab">
-                        <ul>
-                            <li><a href="#">ALL</a></li>
-                            <li><a href="#">JavaScript</a></li>
-                            <li><a href="#">HTML</a></li>
-                            <li><a href="#">CSS</a></li>
-                            <li><a href="#">jQuery</a></li>
-                        </ul>
-                    </div>
+                <div class="gallery-main-tab">
+                    <ul>
+                        <li>
+                            <a href="">ALL</a>
+                        </li>
+                        <li>
+                            <a href="">JavaScript</a>
+                        </li>
+                        <li>
+                            <a href="">HTML</a>
+                        </li>
+                        <li>
+                            <a href="">CSS</a>
+                        </li>
+                        <li>
+                            <a href="">jQuery</a>
+                        </li>
+                    </ul>
+                </div>
                     <div class="main-right">
                         <!-- 瀑布流 -->
                         <div class="masonry">
@@ -92,100 +113,125 @@
                             </div>
                         </div>
                     </div>
-                    <!-- 右边底下的查看更多标签 -->
-                    <div class="main-right-more">
-                        <a href="#">点击查看更多</a>
-                    </div>
-                </div>
-                <div class="gallery-left">
-                    <div class="gallery-search">
-                        <input type="text" name="" value="" placeholder="Search...">
-                        <button type="button" name="button">GO</button>
-                    </div>
-                    <div class="hot-rank">
-                        <p>人气排行榜</p>
-                        <ol>
-                            <li>艾欧尼亚100%</li>
-                            <li>诺克萨斯90%</li>
-                            <li>德玛西亚80%</li>
-                            <li>符文大地70%</li>
-                            <li>没有添加条形图</li>
-                            <li>这里丑到爆炸!!</li>
-                        </ol>
-                    </div>
+                <div class="gallery-more">
+                    <a href="">点击获取更多内容</a>
                 </div>
             </div>
-        </article>
-        <footer>
-            <nav id="nav2">
-                <a href="index.html">首页</a>
-                <a href="blog.html">文章</a>
-                <a href="gallery.html">作品</a>
-                <a href="about.html">关于</a>
-            </nav>
-            <div id="footer">
-                <div class="footer-container">
-                    <div>
-                        <p>学习资料</p>
-                        <ul>
-                            <a href="#javascript:;"><li>Link</li></a>
-                            <a href="#javascript:;"><li>Link</li></a>
-                            <a href="#javascript:;"><li>Link</li></a>
-                            <a href="#javascript:;"><li>Link</li></a>
-                            <a href="#javascript:;"><li>Link</li></a>
-                            <a href="#javascript:;"><li>Link</li></a>
-                        </ul>
-                    </div>
-                    <div>
-                        <p>友情链接</p>
-                        <ul>
-                            <a href="#javascript:;"><li>Link</li></a>
-                            <a href="#javascript:;"><li>Link</li></a>
-                            <a href="#javascript:;"><li>Link</li></a>
-                            <a href="#javascript:;"><li>Link</li></a>
-                            <a href="#javascript:;"><li>Link</li></a>
-                            <a href="#javascript:;"><li>Link</li></a>
-                        </ul>
-                    </div>
-                    <div>
-                        <p>我的爱好</p>
-                        <ul>
-                            <a href="#javascript:;"><li>Link</li></a>
-                            <a href="#javascript:;"><li>Link</li></a>
-                            <a href="#javascript:;"><li>Link</li></a>
-                            <a href="#javascript:;"><li>Link</li></a>
-                            <a href="#javascript:;"><li>Link</li></a>
-                            <a href="#javascript:;"><li>Link</li></a>
-                        </ul>
-                    </div>
-                    <div>
-                        <p>化工生活</p>
-                        <ul>
-                            <a href="#javascript:;"><li>Link</li></a>
-                            <a href="#javascript:;"><li>Link</li></a>
-                            <a href="#javascript:;"><li>Link</li></a>
-                            <a href="#javascript:;"><li>Link</li></a>
-                            <a href="#javascript:;"><li>Link</li></a>
-                            <a href="#javascript:;"><li>Link</li></a>
-                        </ul>
-                    </div>
-                    <div>
-                        <p>校园活动</p>
-                        <ul>
-                            <a href="#javascript:;"><li>Link</li></a>
-                            <a href="#javascript:;"><li>Link</li></a>
-                            <a href="#javascript:;"><li>Link</li></a>
-                            <a href="#javascript:;"><li>Link</li></a>
-                            <a href="#javascript:;"><li>Link</li></a>
-                            <a href="#javascript:;"><li>Link</li></a>
-                        </ul>
+            <div class="gallery-search">
+                <div class="gallery-search-main">
+                    <div class="gallery-search-wrap">
+                        <input type="text" name="" id="" placeholder="Search...">
+                        <button>GO</button>
                     </div>
                 </div>
-                <div class="right">
-                    <p class="right-info">版权信息</p>
-                    <img src="img/icon-github.png" alt="logo">
+                <div class="hot-rank">
+                    <h4>人气排行榜</h4>
+                    <ol>
+                        <li>HTML</li>
+                        <li>CSS</li>
+                        <li>JavaScript</li>
+                        <li>jQuert</li>
+                    </ol>
                 </div>
             </div>
-        </footer>
-    </body>
+        </div>
+    </article>
+    <footer id="footer-layout">
+        <div id="footer-nav">
+            <ul>
+                <li>
+                    <a href="index.html">首页</a>
+                </li>
+                <li>
+                    <a href="blog.html">文章</a>
+                </li>
+                <li>
+                    <a href="gallery.html">作品</a>
+                </li>
+                <li>
+                    <a href="about.html">关于</a>
+                </li>
+            </ul>
+        </div>
+        <div id="footer-link-wrap">
+            <div class="footer-link">
+                <p>学习资料</p>
+                <ul>
+                    <a href="javascript:;">
+                        <li>Link</li>
+                    </a>
+                    <a href="javascript:;">
+                        <li>Link</li>
+                    </a>
+                    <a href="javascript:;">
+                        <li>Link</li>
+                    </a>
+                </ul>
+            </div>
+            <div class="footer-link">
+                <p>友情链接</p>
+                <ul>
+                    <a href="javascript:;">
+                        <li>Link</li>
+                    </a>
+                    <a href="javascript:;">
+                        <li>Link</li>
+                    </a>
+                    <a href="javascript:;">
+                        <li>Link</li>
+                    </a>
+                </ul>
+            </div>
+            <div class="footer-link">
+                <p>我的爱好</p>
+                <ul>
+                    <a href="javascript:;">
+                        <li>Link</li>
+                    </a>
+                    <a href="javascript:;">
+                        <li>Link</li>
+                    </a>
+                    <a href="javascript:;">
+                        <li>Link</li>
+                    </a>
+                </ul>
+            </div>
+            <div class="footer-link">
+                <p>校园生活</p>
+                <ul>
+                    <a href="javascript:;">
+                        <li>Link</li>
+                    </a>
+                    <a href="javascript:;">
+                        <li>Link</li>
+                    </a>
+                    <a href="javascript:;">
+                        <li>Link</li>
+                    </a>
+                </ul>
+            </div>
+            <div class="footer-link">
+                <p>无法点击</p>
+                <ul>
+                    <a href="javascript:;">
+                        <li>Link</li>
+                    </a>
+                    <a href="javascript:;">
+                        <li>Link</li>
+                    </a>
+                    <a href="javascript:;">
+                        <li>Link</li>
+                    </a>
+                </ul>
+            </div>
+        </div>
+        <div id="footer-right">
+            <p>版权信息</p>
+            <a href="https://www.github.com/ArcherElric/">
+                <img src="img/icon-github.png" alt="">
+            </a>
+        </div>
+    </footer>
+</body>
+
 </html>
