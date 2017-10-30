@@ -97,6 +97,40 @@ function getPosition(element) {
     return o 
 }
 
-function $(selector) {
-
+function $() {
+    var a = arguments[0]
+    if (!a) return false
+    var all = document.getElementsByTagName("*")
+    var t = a.slice(0, 1)
+    var o = a.slice(1)
+    var reg_arr = /^\[(\w+)\]$/
+    var reg_arr_sam = /^\[(\w+)=(\w+)\]$/g
+    if (t === "#") {
+        return document.getElementById(o)
+    } else if (t === ".") {
+        return document.getElementsByClassName(o)[0]
+    } else if (reg_arr_sam.test(a)) {
+        //按属性值查找
+        var b = a.slice(1,-1)
+        var array = b.split("=")
+        for (var i = 0; i < all.length; i++) {
+            if (all[i].hasAttribute(array[0])) {
+                if (all[i].getAttribute(array[0]) === array[1]) {
+                    return all[i]
+                }
+            }
+        }
+    } else if (reg_arr.test(a)) {
+        var b = a.slice(1,-1)
+        // var result = []
+        for (var i = 0; i < all.length; i++) {
+            if (all[i].hasAttribute(b)) {
+                // result.push(all[i])
+                return all[i]
+            }
+        }
+        // return result
+    } else if () {
+        //组合查找
+        }
 }
