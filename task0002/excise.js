@@ -97,40 +97,136 @@ function getPosition(element) {
     return o 
 }
 
-function $() {
-    var a = arguments[0]
-    if (!a) return false
-    var all = document.getElementsByTagName("*")
-    var t = a.slice(0, 1)
-    var o = a.slice(1)
-    var reg_arr = /^\[(\w+)\]$/
-    var reg_arr_sam = /^\[(\w+)=(\w+)\]$/g
-    if (t === "#") {
-        return document.getElementById(o)
-    } else if (t === ".") {
-        return document.getElementsByClassName(o)[0]
-    } else if (reg_arr_sam.test(a)) {
-        //按属性值查找
-        var b = a.slice(1,-1)
-        var array = b.split("=")
-        for (var i = 0; i < all.length; i++) {
-            if (all[i].hasAttribute(array[0])) {
-                if (all[i].getAttribute(array[0]) === array[1]) {
-                    return all[i]
+/**
+ * mini $
+ * 
+ * @param {any} selector 
+ * @returns 
+ */
+function $(selector) {
+    var idReg = /^#([\w\-]+)/
+    var classReg = /^\.([\w\-]+)/
+    var tagReg = /\w+$/i
+    var attrReg = /(\w+)?\[([^=\]]+)(?:=(["'])?([^\]"'])\3?)?\])?/
+
+    function blank() {}
+
+    function direct(part, action) {
+        action = action || {
+            id: blank,
+            className: blank,
+            tag: blank,
+            attribute: blank,
+        }
+
+        var fn;
+        var params = [].slice.call(arguments, 2)
+        if (result = part.match(idReg)) {
+            fn = "id"
+            params.push(result[1])
+        } else if (result = part.match(classReg)) {
+            fn = "className"
+            params.push(result[1])
+        } else if (result = part.match(tagReg)) {
+            fn = "tag"
+            params.push(result[0])
+        } else if (result = part.match(attrReg)) {
+            fn = "attribute"
+            var tag = result[1]
+            var key = result[2]
+            var value = result[4]
+            params.push(tag, key, value)
+        }
+        return action[fn].apply(this, params)
+    }
+
+    function find(parts, context) {
+        var part = parts.pop()
+
+        var action = {
+            id: function(id) {
+                return document.getElementById(id)
+            },
+            className: function(className) {
+                var result = []
+                if (context.getElementsByClassName) {
+                    result = context.getElementsByClassName(className)
+                } else {
+                    var temp = context.getElementsByTagName("*")
+                    for (var i = 0; i < temp.length; i++) {
+                        var node = temp[i]
+                        if (hasClass(node, className)) {
+                            result.push(node)
+                        }
+                    }
+                }
+                return result
+            },
+            tag: function(tag) {
+                return document.getElementsByTagName(tag)
+            },
+            attribute: function(tag, key, value) {
+                var result = []
+                var temp = context.getElementsByTagName(tag || "*")
+                for (var i = 0; i < temp.length; i++) {
+                    var node = temp[i]
+                    if (value) {
+                        var v = node.getAttribute(key)
+                        if (v === value) {
+                            result.push(node)
+                        }
+                    } else if (node.hasAttribute(key)) {
+                        result.push(node)
+                    }
+                }
+                return result
+            },
+        }
+
+        var ret = direct(part, action)
+        ret = [].slice.call(ret)
+
+        return parts[0] && ret[0] ? filterParents(parts, ret) : ret
+    }
+
+    function filterParents(parts, ret) {
+        var parentParts = parts.pop()
+        var result = []
+
+        for (var i = 0; i < ret.length; i++) {
+            var node = ret[i]
+            var p = node
+
+            while(p = p.parentNode) {
+                var action = {
+                    id: function(el, id) {
+                        return (el === id)
+                    },
+                    className: function(el, className) {
+                        return hasClass(el, className)
+                    },
+                    tag: function(el, tag) {
+                        return (el.tagName.toLowerCase() === tag)
+                    },
+                    attribute: function(el, tag, key, value) {
+                        var valid = true
+                        if (tag) {
+                            valid = valid && (value === el.getAttribute(key))
+                        }
+                        return valid
+                    },
+                }
+                var matches = direct(parentParts, action, p)
+
+                if (matches) {
+                    break
                 }
             }
+            return parts[0] && result[0] ? filterParents(parts, result) : result
         }
-    } else if (reg_arr.test(a)) {
-        var b = a.slice(1,-1)
-        // var result = []
-        for (var i = 0; i < all.length; i++) {
-            if (all[i].hasAttribute(b)) {
-                // result.push(all[i])
-                return all[i]
-            }
-        }
-        // return result
-    } else if () {
-        //组合查找
-        }
+    }
+
+    var result = find(selector.split(/\s+/), context)
+
+    return result
 }
